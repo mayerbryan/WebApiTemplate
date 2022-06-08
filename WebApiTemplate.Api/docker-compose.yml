@@ -1,0 +1,26 @@
+﻿
+#the services is where you place everything that you want inside your container
+services:
+ #this is the name of your container so choose what you want
+ WebApiTemplate:
+
+  # we will use and microsoft SQL database as base for our server so we can download this image
+  # from the docker hub to utilize inside our project
+  image: mcr.microsoft.com/mssql/server:2022-latest
+
+  # here we decide wich port we want to use to communicate with this server that we are creating
+  # the first number you decide wich one you want, the second is the standart communication port of the
+  # server you are using, so if you decide to use a different server like MongoDB, MySQL or other healthcheck:
+  # the right standart port to use in the second field
+  ports:
+   - "1433:1433"
+
+  # the enviroment place is where you can put all the rules that you want for your server since we are doing a basic
+  # setup we are using the required environmental variables that we need to use the MSSQL this is related to the image
+  # that we selected above so if you want to change the image to a different one check the documentation of the image
+  # you want to use to see the required environmental variables.
+  environment:
+   ACCEPT_EULA: "Y"
+   # since the server password is a required environmental variable we are storing this password inside our .env file
+   # so when docker starts he will check inside our .env file what is the password do connect.
+   SA_PASSWORD: "${DATABASE_PASSWORD}"

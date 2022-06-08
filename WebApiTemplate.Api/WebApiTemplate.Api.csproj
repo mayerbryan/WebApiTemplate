@@ -6,13 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\WebApiTemplate.Domain\WebApiTemplate.Domain.csproj" />
-    <ProjectReference Include="..\WebApiTemplate.Shared\WebApiTemplate.Shared.csproj" />
-  </ItemGroup>
-
 </Project>

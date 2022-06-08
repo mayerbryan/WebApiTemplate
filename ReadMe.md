@@ -89,7 +89,7 @@ this way you can simulate an online database inside your computer without the ne
 
 your data will be saved here:
 
-![DockerTab!](../SolutionItems/Images/DockerComposeTab.png)
+![DockerTab!](Images/DockerComposeTab.png)
 
 so you can connect to docker utilizing a port like we do in an external server
 
@@ -103,7 +103,7 @@ docker-compose up
 
 this will setup and run the server inside the docker application like in the image below
 
-![DockerContainer!](../SolutionItems/Images/DockerContainerRuning.png)
+![DockerContainer!](Images/DockerContainerRuning.png)
 
 so now your server inside on your local machine is runing and we are ready to start filling this server with databases, tables
 and everything we need.

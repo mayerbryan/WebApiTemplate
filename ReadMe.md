@@ -171,5 +171,45 @@ to build our database, so when we execute this code the app will build our datab
 container.
 
 
+## Migrations Auto Update
 
+each time we start our application we need to run the command:
+
+```
+docker ef migrations update
+```
+
+this way the entity framework will check if he needs to update our database our tables inside our server. to avoid this
+we will created an auto update code that is found inside our Program.cs this way each time we start the application
+entity framework will update our database for us.
+
+so if in any momento you need to make a new database, new table or add/remove coluns to your tables you need to make/change
+the models, add/remove the configurations in the map file, add/remove in the AppDbContext file and execute the command to 
+update the migrations files. a new migration file will be made by entity framework and then you can run the app to changes
+take place in the database.
+
+## Runing the first time
+
+if you closed the docker application or stopped our container that we made in our previous step, you need to start it again
+
+open the terminal navigate to our Api folder using:
+
+```
+cd WebApiTemplate.Api
+```
+
+and run the command:
+
+```
+docker-compose up
+```
+
+this way we will start our containeir inside the docker application. we need to do this step so when we start our
+application we have a place to save our database.
+
+now open a new terminal and run our app using
+
+```
+dotnet run
+```
 

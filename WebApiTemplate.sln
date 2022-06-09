@@ -13,13 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTemplate.Api", "WebAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{7E6EF456-B18D-4705-8D74-6F202185B760}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		ReadMe.md = ReadMe.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B0F9B052-7C46-4DD2-BCCA-A43D02E0F71C}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Pictures\Screenshots\DockerComposeTab.png = ..\..\..\Pictures\Screenshots\DockerComposeTab.png
-		..\..\..\Pictures\Screenshots\DockerContainerRuning.png = ..\..\..\Pictures\Screenshots\DockerContainerRuning.png
 	EndProjectSection
 EndProject
 Global
@@ -47,9 +42,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B0F9B052-7C46-4DD2-BCCA-A43D02E0F71C} = {7E6EF456-B18D-4705-8D74-6F202185B760}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE1BE9D0-298B-451B-B2EA-91C90095374C}

@@ -1,5 +1,7 @@
 ﻿namespace WebApiTemplate.Api.Models
 {
+    //this is the base model for our user that will be used to create the database and
+    //retrieve the information from the database to use in your APP
     public class UserModel
     {
         public int Id { get; set; }

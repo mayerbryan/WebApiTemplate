@@ -141,7 +141,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
 
 Entity framework will check for the DbContext instruction inside our files in our project, this instruction are located in
-the WebApiTemplateDbContext.cs file. then he will check for all the models that we are mapping inside this file.
+the AppDbContext.cs file. then he will check for all the models that we are mapping inside this file.
 
 in this case we are mapping only the UserModel.cs file but to improve the precision of entity framework and avoid any 
 future problem with the database creation we add some instructions to this process using the UserMap.cs file, where

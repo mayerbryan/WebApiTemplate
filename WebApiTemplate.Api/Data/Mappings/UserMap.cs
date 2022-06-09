@@ -6,6 +6,8 @@ namespace WebApiTemplate.Api.Data.Mappings
 {
     public class UserMap : IEntityTypeConfiguration<UserModel>
     {
+        //here we can setup any additional configuration to our tables inside our database
+        //the entity framework check this instructions and the Model to build the SQL code
         public void Configure(EntityTypeBuilder<UserModel> builder)
         {
             builder.ToTable("User");

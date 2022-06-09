@@ -99,6 +99,7 @@ your data will be saved here:
 
 ///////////////////////////docker tab image
 
+
 so you can connect to docker utilizing a port like we do in an external server
 
 to create the container we need to create an docker-compose.yml file and utilize the sample that we have here to create
@@ -111,7 +112,9 @@ docker-compose up
 
 this will setup and run the server inside the docker application like in the image below
 
+
 ////////////////////////////////docker container iamge
+
 
 so now your server inside on your local machine is runing and we are ready to start filling this server with databases, tables
 and everything we need.

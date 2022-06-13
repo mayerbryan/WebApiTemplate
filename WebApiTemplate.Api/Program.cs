@@ -19,11 +19,21 @@ builder.Services.AddDbContext<AppDbContext>();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//here the app will build all instructions above to make our application work
+
+// we are telling to our program to add the controllers files that we are using in the controllers folder.
+builder.Services.AddControllers();
+
+//here the app will take all instructions above and build everything together to make our application work
 var app = builder.Build();
+
+
 
 //this is the code that execute the migrations auto update
 DataBaseManagementService.MigrationInitialisation(app);
+
+// during the run time the app will check all the controller our code thet receive the ControllerBase field
+// and make the routs to our app send and receive the requests thrue the controllers
+app.MapControllers();
 
 //here our application will starts so we can use it
 app.Run();

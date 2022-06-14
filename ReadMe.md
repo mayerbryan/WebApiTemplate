@@ -42,9 +42,9 @@ dotnet new mstest
 ```
 inside the tests folder.
 ```
-dotnet sln add {folder name} 
+dotnet sln add (ls -r **\*.csproj)
 ```
-to add the folder to the solution
+to add all folders to the solution
 ```
 dotnet restore
 ```
@@ -212,4 +212,16 @@ now open a new terminal and run our app using
 ```
 dotnet run
 ```
+
+## Controllers
+
+Controllers are the second part of our MVC design pattern, they are responsible for getting the information from our fron end
+(here we are using postman to handle this front end part) and send this to our API or Database. we will make a simple CRUD 
+(Create, Read, Update, Delete) in our project to understand how it works each requisition.
+
+we need to add to our program.cs file the following code:
+
+
+Since we have only one place to change that is the User database, we need to create a file inside our Controllers folder to
+handle our CRUD requisitions.
 

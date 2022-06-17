@@ -221,7 +221,82 @@ Controllers are the second part of our MVC design pattern, they are responsible 
 
 we need to add to our program.cs file the following code:
 
+```
+builder.Services.AddControllers();
+```
 
-Since we have only one place to change that is the User database, we need to create a file inside our Controllers folder to
-handle our CRUD requisitions.
+above this code:
+```
+var app = builder.Build();
+```
 
+this way the app will add our controllers before finish the app build. and add this code:
+```
+app.MapControllers();
+```
+before the app.run(); code so it can map our controllers before the app starts
+
+
+
+From now on, every time we make an requisition in the postman application this will enter in our application thrue the
+UserController.cs, the app will check the information using the UserMap.cs and the UserModel.Cs code and then will send the
+information to our database
+
+we can now use the following models to make requisitions to our app;
+
+## Creating users
+
+Route: `/v1/user`
+Method: `POST`
+Model of body requisition to create a new user:
+```json
+{
+    "FirtName": "Jhon",
+    "LastName": "Lenon",
+    "Phone": "156 789 143",
+    "Email": "jhonlenon@mail.com"
+}
+```
+Answer model:
+```json
+{
+    "Id": 1,
+    "FirtName": "Jhon",
+    "LastName": "Lenon",
+    "Phone": "156 789 143",
+    "Email": "jhonlenon@mail.com"
+}
+```
+
+## Get users
+Route: `/v1/user`
+Method: `GET`
+
+Answer model:
+```json
+{
+    "Id": 1,
+    "FirtName": "Jhon",
+    "LastName": "Lenon",
+    "Phone": "156 789 143",
+    "Email": "jhonlenon@mail.com"
+}
+```
+
+## Update an user by Id
+Route: `/v1/user/{int:id}`
+Method: `PUT`
+
+Model request to update an user:
+```json
+{
+    "FirtName": "Tom",
+    "LastName": "Lenon",
+    "Phone": "156 789 143",
+    "Email": "jhonlenon@mail.com"
+}
+```
+
+## Delete user by Id
+Route: `/v1/user/{int:id}`
+Method: `Delete`

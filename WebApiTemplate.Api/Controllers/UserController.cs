@@ -13,7 +13,7 @@ namespace WebApiTemplate.Api.Controllers
         //Post is to send the information to our database (create) 
         //v1 is versioning pattern so if you want to make an update you can copy/paste and change the version to v2
         //after a time you can delete v1 without compromise your api functionality
-        [HttpPost("/v1/users")]
+        [HttpPost("/v1/user")]
 
         //we use IactionResult here to handle the user input erros like invalid request our other erros
         //instead of making this ourselfs we use the AspNetCore.MVC package to handle this for us
@@ -31,12 +31,12 @@ namespace WebApiTemplate.Api.Controllers
         }
 
 
-        [HttpGet("/v1/products")]
+        [HttpGet("/v1/user")]
         public IActionResult Get([FromServices] AppDbContext context)
             => Ok(context.User.ToList());
 
 
-        [HttpPut("/v1/products/{id:int}")]
+        [HttpPut("/v1/user/{id:int}")]
         public IActionResult Put(
             [FromRoute] int id,
             [FromBody] UserModel User,
@@ -57,7 +57,7 @@ namespace WebApiTemplate.Api.Controllers
             return Ok(model);
         }
 
-        [HttpDelete("/v1/products/{id:int}")]
+        [HttpDelete("/v1/user/{id:int}")]
         public IActionResult Delete(
             [FromRoute] int id,
             [FromServices] AppDbContext context)

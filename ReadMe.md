@@ -180,10 +180,10 @@ docker ef migrations update
 ```
 
 this way the entity framework will check if he needs to update our database our tables inside our server. to avoid this
-we will created an auto update code that is found inside our Program.cs this way each time we start the application
-entity framework will update our database for us.
+we will created an auto update code that is found inside our Program.cs, using the DataBaseManagementService.cs file, so 
+each time we start the application entity framework will update our database for us.
 
-so if in any momento you need to make a new database, new table or add/remove coluns to your tables you need to make/change
+if in any moment you need to make a new database, new table or add/remove coluns to your tables you need to make/change
 the models, add/remove the configurations in the map file, add/remove in the AppDbContext file and execute the command to 
 update the migrations files. a new migration file will be made by entity framework and then you can run the app to changes
 take place in the database.

@@ -92,6 +92,13 @@ to use this we need to instal the DotNetEnv package using the following command:
 dotnet add package DotNetEnv
 ```
 
+and in the .env file we need to setup the server and port like this to ensure the connection with the database
+
+```
+SERVER=localhost
+DATABASE_PORT=1433
+```
+
 to create the database that we will use to store our data, we will utilize the Docker container system.
 this way you can simulate an online database inside your computer without the need for conecting to an external server.
 

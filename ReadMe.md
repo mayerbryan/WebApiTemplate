@@ -99,6 +99,9 @@ SERVER=localhost
 DATABASE_PORT=1433
 ```
 
+the other variables that we need to configure in the .env file can be set as you wish, use the env.template file to check all the
+variables you need to ensure the connection to our database
+
 to create the database that we will use to store our data, we will utilize the Docker container system.
 this way you can simulate an online database inside your computer without the need for conecting to an external server.
 

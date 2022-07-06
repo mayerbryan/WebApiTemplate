@@ -310,3 +310,5 @@ Model request to update an user:
 ## Delete user by Id
 Route: `/v1/user/{int:id}`
 Method: `Delete`
+
+project will be updated when new functions are implemented
